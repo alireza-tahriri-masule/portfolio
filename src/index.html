@@ -14,26 +14,45 @@
     <link rel="stylesheet" href="./custom.css">
     <!-- BoxIcons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Alpinejs -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
 
-<body class="font-english bg-[#000000] text-white">
+<body class="text-white font-english bg-[#000000]">
 
     <div id="app">
-        <header id="header" class="relative flex flex-col items-center justify-between h-screen">
-            <nav class="container flex items-center justify-between py-6">
-                <a class="text-3xl font-semibold" href="#">Portfolio</a>
+        <header id="header" class="relative flex flex-col items-center justify-between h-screen space-y-16">
+            <nav x-data="{ open: false }"
+                class="container flex flex-col my-6 space-y-6 md:space-y-0 md:justify-between md:items-center md:flex-row">
+                <div class="flex items-center justify-between ">
+                    <a class="text-3xl font-semibold" href="#">Portfolio</a>
 
-                <div class="flex items-center space-x-6 text-[1.2rem]">
-                    <a class="text-[#4049d3] transition-all hover:scale-110" href="#">Home</a>
-                    <a class="hover:text-[#4049d3] transition-all hover:scale-110" href="#">Service</a>
-                    <a class="hover:text-[#4049d3] transition-all hover:scale-110" href="#">Projects</a>
-                    <a class="hover:text-[#4049d3] transition-all hover:scale-110" href="#">About</a>
-                    <a class="hover:text-[#4049d3] transition-all hover:scale-110" href="#">Contacts</a>
+                    <div x-on:click="open = !open"
+                        class="flex items-center justify-center p-2 bg-[#4049d3] rounded cursor-pointer md:hidden">
+                        <i class='text-[2rem] text-[#000000] bx bx-menu'></i>
+                    </div>
+                </div>
+
+                <div x-show="open"
+                    class="flex flex-col md:flex-row md:items-center md:space-x-6 text-[1.2rem] bg-[#121212] md:bg-transparent p-4 rounded-lg select-none">
+                    <a class="text-[#4049d3] transition-all md:hover:scale-x-110" href="#">Home</a>
+                    <a class="hover:text-[#4049d3] transition-all md:hover:scale-x-110" href="#">Service</a>
+                    <a class="hover:text-[#4049d3] transition-all md:hover:scale-x-110" href="#">Projects</a>
+                    <a class="hover:text-[#4049d3] transition-all md:hover:scale-x-110" href="#">About</a>
+                    <a class="hover:text-[#4049d3] transition-all md:hover:scale-x-110" href="#">Contacts</a>
+                </div>
+
+                <div class="md:flex hidden flex-row items-center space-x-6 text-[1.2rem] p-4 rounded-lg select-none">
+                    <a class="text-[#4049d3] transition-all hover:scale-x-110" href="#">Home</a>
+                    <a class="hover:text-[#4049d3] transition-all hover:scale-x-110" href="#">Service</a>
+                    <a class="hover:text-[#4049d3] transition-all hover:scale-x-110" href="#">Projects</a>
+                    <a class="hover:text-[#4049d3] transition-all hover:scale-x-110" href="#">About</a>
+                    <a class="hover:text-[#4049d3] transition-all hover:scale-x-110" href="#">Contacts</a>
                 </div>
             </nav>
 
-            <div class="container grid grid-flow-row grid-cols-2 gap-6">
-                <div class="space-y-8">
+            <div class="container grid grid-flow-row grid-cols-1 gap-14 lg:grid-cols-2">
+                <div class="order-2 space-y-8 lg:order-none">
                     <div class="space-y-2">
                         <h1 class="text-3xl font-extrabold">Hi, I'm Alireza Tahriri Masule</h1>
                         <h3 class="text-[#4049d3] text-xl font-semibold">Fullstack Web Developer</h3>
@@ -55,14 +74,23 @@
                     </div>
 
                     <div class="flex items-center space-x-6">
-                        <i class='bx bxl-facebook text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
-                        <i class='bx bxl-linkedin text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer' ></i>
-                        <i class='bx bxl-instagram text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer' ></i>
-                        <i class='bx bxl-twitter text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
-                        <i class='bx bxl-tiktok text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer' ></i>
+                        <i
+                            class='bx bxl-facebook text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
+                        <i
+                            class='bx bxl-linkedin text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
+                        <i
+                            class='bx bxl-instagram text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
+                        <i
+                            class='bx bxl-twitter text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
+                        <i
+                            class='bx bxl-tiktok text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
                     </div>
                 </div>
-                <div class="portfolio__image"></div>
+                <div class="flex items-center justify-center order-1 h-full lg:order-none">
+                    <div
+                        class=" portfolio__image w-[400px] h-[400px] sm:w-[450px] sm:h-[400px] lg:w-full lg:h-[450px] xl:h-full rounded">
+                    </div>
+                </div>
             </div>
 
             <div></div>
