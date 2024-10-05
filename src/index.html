@@ -9,11 +9,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./custom.css">
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
+<body class="font-english bg-[#000000] text-white">
 
-    <div id="app"></div>
+    <div id="app">
+        <header id="header" class="relative flex flex-col items-center justify-between h-screen">
+            <nav class="container flex items-center justify-between py-6">
+                <a class="text-3xl font-semibold" href="#">Portfolio</a>
+
+                <div class="flex items-center space-x-6 text-[1.2rem]">
+                    <a class="text-[#4049d3] transition-all hover:scale-110" href="#">Home</a>
+                    <a class="hover:text-[#4049d3] transition-all hover:scale-110" href="#">Service</a>
+                    <a class="hover:text-[#4049d3] transition-all hover:scale-110" href="#">Projects</a>
+                    <a class="hover:text-[#4049d3] transition-all hover:scale-110" href="#">About</a>
+                    <a class="hover:text-[#4049d3] transition-all hover:scale-110" href="#">Contacts</a>
+                </div>
+            </nav>
+
+            <div class="container grid grid-flow-row grid-cols-2 gap-6">
+                <div class="space-y-8">
+                    <div class="space-y-2">
+                        <h1 class="text-3xl font-extrabold">Hi, I'm Alireza Tahriri Masule</h1>
+                        <h3 class="text-[#4049d3] text-xl font-semibold">Fullstack Web Developer</h3>
+                    </div>
+
+                    <p class="text-[1.2rem] text-gray-100">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatum quo quod quam molestias
+                        debitis sint est harum inventore obcaecati! Vitae temporibus suscipit explicabo at ut? Qui
+                        voluptas laudantium natus vitae et quam, facere nostrum nisi eligendi nulla non quaerat,
+                        necessitatibus perferendis unde iste adipisci consequatur maxime eaque, cumque veritatis quos!
+                    </p>
+
+                    <div class="flex items-center space-x-4">
+                        <button
+                            class="text-[#000000] text-[1.2rem] bg-[#4049d3] rounded w-[200px] py-3 px-6 font-medium hover:bg-transparent hover:text-[#4049d3] border-2 border-transparent hover:border-[#3c44d2] transition-all">Hire</button>
+                        <button
+                            class="bg-transparent border-2 border-[#3c44d2] text-[#4049d3] rounded w-[200px] py-3 px-6 font-medium hover:bg-[#4049d3] hover:text-[#000000] transition-all">Contact
+                            Me</button>
+                    </div>
+
+                    <div class="flex items-center space-x-6">
+                        <i class='bx bxl-facebook text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
+                        <i class='bx bxl-linkedin text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer' ></i>
+                        <i class='bx bxl-instagram text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer' ></i>
+                        <i class='bx bxl-twitter text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer'></i>
+                        <i class='bx bxl-tiktok text-[1.4rem] text-[#4049d3] border border-[#3c44d2] rounded-lg py-3 px-4 flex items-center justify-center hover:scale-110 cursor-pointer' ></i>
+                    </div>
+                </div>
+                <div class="portfolio__image"></div>
+            </div>
+
+            <div></div>
+        </header>
+    </div>
 
 </body>
 
